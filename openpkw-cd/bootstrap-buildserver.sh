@@ -34,5 +34,5 @@ sudo npm install -g bower
 echo [Configuring Continuous Delivery]
 sudo mkdir /var/lib/jenkins/.ssh
 sudo chown jenkins:jenkins /var/lib/jenkins/.ssh
-sudo cp /vagrant/buildserver/jenkins/.ssh/openpkw-jenkins-cd.pem /var/lib/jenkins/.ssh/
+sudo cp /vagrant/jenkins/.ssh/openpkw-jenkins-cd.pem /var/lib/jenkins/.ssh/
 sudo chown jenkins:jenkins /var/lib/jenkins/.ssh/openpkw-jenkins-cd.pem
