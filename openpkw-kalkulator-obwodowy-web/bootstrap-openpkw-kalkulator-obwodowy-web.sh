@@ -16,7 +16,7 @@ sudo apt-get -y install npm
 echo [Configuring Continuous Delivery]
 sudo useradd openpkw-cd -m
 sudo mkdir /var/www/html/openpkw-kalkulator-obwodowy-web
-sudo chmod a+rwx /var/www/htmlopenpkw-kalkulator-obwodowy-web
+sudo chmod a+rwx /var/www/html/openpkw-kalkulator-obwodowy-web
 sudo mkdir /home/openpkw-cd/.ssh
 sudo cp /vagrant/.ssh/authorized_keys /home/openpkw-cd/.ssh/authorized_keys
 sudo chown openpkw-cd:openpkw-cd /home/openpkw-cd/.ssh
