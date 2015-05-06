@@ -1,0 +1,20 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/trusty64"
+
+  config.vm.network :forwarded_port, host: 4500, guest: 8080  # Jenkins
+  config.vm.network :forwarded_port, host: 4501, guest: 80    # Apache
+  config.vm.network :forwarded_port, host: 4502, guest: 8090  # Glassfish openpkw-it domain
+  config.vm.network :forwarded_port, host: 4505, guest: 4848  # Glassfish admin console
+
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  config.vm.provision :shell, path: "bootstrap-openpkw-kalkulator-obwodowy-web.sh"
+  
+  config.vm.provider "virtualbox" do |v|
+  	v.memory = 4096
+  	v.cpus = 1
+  end
+end
