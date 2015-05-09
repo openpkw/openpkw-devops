@@ -30,7 +30,7 @@ case "$1" in
     stop)  
         echo "Stopping JBoss AS 7..."  
         #sudo -u jboss sh ${JBOSS_HOME}/bin/jboss-admin.sh --connect command=:shutdown            ##  If running as user "jboss"  
-        start-stop-daemon --start --quiet --background --chuid jboss --exec ${JBOSS_HOME}/bin/jboss-admin.sh -- --connect command=:shutdown     ## Ubuntu  
+        start-stop-daemon --start --quiet --background --chuid jboss --exec ${JBOSS_HOME}/bin/jboss-cli.sh -- --connect command=:shutdown     ## Ubuntu  
         #${JBOSS_HOME}/bin/jboss-cli.sh --connect command=:shutdown  
     ;;  
     *)  
