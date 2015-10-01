@@ -4,6 +4,10 @@
 
 ![Ports and protocols](https://raw.githubusercontent.com/openpkw/openpkw-devops/master/OpenPKW%20Ports%20and%20Protocols.png)
 
+## Środowiska OpenPKW
+
+![Environments](https://raw.githubusercontent.com/openpkw/openpkw-devops/master/OpenPKW%20Environments.png)
+
 ## Sposób uruchamiania
 * Zainstalować VirtualBox
 * Zainstalować Vagrant
