@@ -1,5 +1,8 @@
-﻿# Environments
-Environments for OpenPKW
+# Konfiguracja środowisk OpenPKW
+
+## Diagram Ports&Protocols
+
+![Ports and protocols](https://raw.githubusercontent.com/openpkw/openpkw-devops/master/OpenPKW%20Ports%20and%20Protocols.png)
 
 ## Sposób uruchamiania
 * Zainstalować VirtualBox
