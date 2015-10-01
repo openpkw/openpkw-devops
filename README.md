@@ -8,7 +8,7 @@
 
 ![Environments](https://raw.githubusercontent.com/openpkw/openpkw-devops/master/OpenPKW%20Environments.png)
 
-## Sposób uruchamiania
+## Sposób testowania skryptów tworzących środowiska OpenPKW
 * Zainstalować VirtualBox
 * Zainstalować Vagrant
 * Do katalogu openpkw-cd/jenkins/.ssh/ wgrać klucz prywatny openpkw-jenkins-cd.pem
