@@ -25,7 +25,7 @@ sudo chmod +x /etc/init.d/wildfly9
 sudo service wildfly9 start
 
 echo [Installing MySQL]
-mysql_root_password=`cat /vagrant/mysql/mysql_root_password`
-export DEBIAN_FRONTEND=noninteractive
-apt-get -q -y install mysql-server
-mysqladmin -u root password $mysql_root_password
+sudo mysql_root_password=`cat /vagrant/mysql/mysql_root_password`
+sudo export DEBIAN_FRONTEND=noninteractive
+sudo apt-get -q -y install mysql-server
+sudo mysqladmin -u root password $mysql_root_password
