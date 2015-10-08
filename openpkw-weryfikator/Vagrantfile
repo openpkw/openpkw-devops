@@ -1,0 +1,20 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/trusty64"
+
+  config.vm.network :forwarded_port, host: 4500, guest: 9080
+  config.vm.network :forwarded_port, host: 4501, guest: 9990
+  config.vm.network :forwarded_port, host: 4502, guest: 9999
+  config.vm.network :forwarded_port, host: 4503, guest: 3306
+
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  config.vm.provision :shell, path: "bootstrap-openpkw-weryfikator.sh"
+  
+  config.vm.provider "virtualbox" do |v|
+  	v.memory = 4096
+  	v.cpus = 1
+  end
+end
