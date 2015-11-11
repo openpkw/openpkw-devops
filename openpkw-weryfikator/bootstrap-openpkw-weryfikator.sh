@@ -6,8 +6,9 @@ echo [Installing updates]
 sudo apt-get -y update
 
 echo [Installing JAVA]
-sudo apt-get -y install openjdk-8-jdk
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get -y install oracle-java8-installer
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/bin/java
 
 echo [Installing WildFly]
 sudo wget http://download.jboss.org/wildfly/9.0.1.Final/wildfly-9.0.1.Final.tar.gz -P /usr/src/
