@@ -1,0 +1,1 @@
+/subsystem=datasources/data-source=OpenPKWDS/:add(user-name=openpkw,password=lwejlr2k3jlsfedlk2j34,jndi-name=java:/jboss/databases/openpkw,driver-name=mysql,connection-url=jdbc:mysql://localhost:3306/openpkw,max-pool-size=20,track-statements=NOWARN,flush-strategy=FailingConnectionOnly,min-pool-size=0)
