@@ -40,8 +40,8 @@ echo mysql-server mysql-server/root_password_again password $mysql_root_password
 sudo apt-get -q -y install mysql-server
 
 echo [Creating OpenPKW Database]
-command = a="mysql -u root -p'"$mysql_root_password"' < /vagrant/mysql/sql/001_Create_OpenPKW_schema_and_user.sql"
-eval $command
+database_creation_command="mysql -u root -p'"$mysql_root_password"' < /vagrant/mysql/sql/001_Create_OpenPKW_schema_and_user.sql"
+eval $database_creation_command
 
 echo [Configuring DataSource for OpenPKW]
 sudo wget http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.37.zip -P /usr/src/
