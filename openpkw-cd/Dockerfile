@@ -22,7 +22,7 @@ RUN npm install -g npm &&\
     npm install -g bower
 USER jenkins
 WORKDIR /var/lib/jenkins/.ssh
-ADD openpkw-jenkins-cd.pem /var/lib/jenkins/.ssh/openpkw-jenkins-cd.pem
+ADD .ssh/openpkw-jenkins-cd.pem /var/lib/jenkins/.ssh/openpkw-jenkins-cd.pem
 USER root
 EXPOSE 8080
 EXPOSE 22
