@@ -14,12 +14,14 @@ RUN sudo apt-get -y update &&\
     apt-get -y install jenkins &&\
     sudo apt-get -y install git &&\
     apt-get -y install maven &&\
-    apt-get -y install nodejs
+    apt-get -y install nodejs &&\
+    sudo apt-get -y install libfontconfig
 RUN ln /usr/bin/nodejs /usr/bin/node -s
 RUN apt-get -y install npm
 RUN npm install -g npm &&\
     npm install -g grunt-cli &&\
-    npm install -g bower
+    npm install -g bower &&\
+    npm install -g phantomjs
 USER jenkins
 WORKDIR /var/lib/jenkins/.ssh
 ADD .ssh/openpkw-jenkins-cd.pem /var/lib/jenkins/.ssh/openpkw-jenkins-cd.pem
