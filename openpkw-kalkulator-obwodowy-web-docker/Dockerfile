@@ -2,7 +2,8 @@ FROM ubuntu:14.04
 RUN apt-get -y update && \
     apt-get -y install apache2 &&\
     apt-get -y install nodejs &&\
-    apt-get -y install npm
+    apt-get -y install npm &&\
+    apt-get -y install wget
 
 ADD authorized_keys /home/openpkw-cd/.ssh/authorized_keys
 
