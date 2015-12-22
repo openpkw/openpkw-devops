@@ -16,5 +16,16 @@
 * Do katalogu openpkw-dokument-generator/jboss dodać hasło użytkownika managementowego jbossa w pliku jenkins_password
 * W poszczególnych katalogach uruchamiać komendę 'vagrant up'
 
+## Sposób uruchamiania aplikacji w kontenerach Docker
+* Zakładamy, że obraz aplikacji jest zbudowany
+* Uruchamiamy kontener: sudo docker run -p <mapping_portów> -d <nazwa_obrazu> tail -f /dev/null
+* Kopiujemy id kontenera: sudo docker ps
+* Uruchamiamy aplikację w kontenerrze: sudo docker exec CONTAINER_ID <komenda_uruchamiajaca_serwis>
+
+Przykład dla aplikacji openpkw-kalkulator-obwodowy_web:
+* sudo docker run -p 80:80 -d openpkw-kalkulator-obwodowy-web tail -f /dev/null
+* sudo docker ps
+* sudo docker exec CONTAINER_ID sudo service apache2 start
+
 ## Lista zadań
 * Wszystkie zadania: [Trello](https://trello.com/b/pfN6MeTO/openpkw-kalkulator-obwodowy-web)
