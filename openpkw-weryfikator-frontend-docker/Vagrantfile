@@ -4,6 +4,7 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.network :forwarded_port, host: 4500, guest: 80    # Apache
+  config.vm.network :forwarded_port, host: 1023, guest: 22    # ssh inside Docker
   config.vm.provision :shell, path: "bootstrap-openpkw-weryfikator-frontend-docker.sh"
   config.vm.provider "virtualbox" do |v|
   	v.memory = 4096

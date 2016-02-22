@@ -3,6 +3,7 @@ RUN apt-get -y update && \
     apt-get -y install apache2 &&\
     apt-get -y install nodejs &&\
     apt-get -y install npm &&\
+    apt-get -y install ssh &&\
     apt-get -y install wget
 
 ADD authorized_keys /home/openpkw-cd/.ssh/authorized_keys
@@ -25,4 +26,7 @@ RUN a2dissite 000-default.conf &&\
     a2ensite openpkw-weryfikator-frontend.conf &&\
     sudo service apache2 restart
 
+RUN sudo service ssh start
+
 EXPOSE 80
+EXPOSE 22
