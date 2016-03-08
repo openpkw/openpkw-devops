@@ -25,9 +25,14 @@ sudo chmod 700 /home/openpkw-cd/.ssh
 sudo chmod 600 /home/openpkw-cd/.ssh/authorized_keys
 
 sudo cp /vagrant/etc/apache2/sites-available/openpkw-kalkulator-obwodowy-web.conf /etc/apache2/sites-available/openpkw-kalkulator-obwodowy-web.conf
-sudo cp /vagrant/index.html /var/www/html/openpkw-kalkulator-obwodowy-web/index.html
+sudo cp /vagrant/openpkw-kalkulator-obwodowy-web-index.html /var/www/html/openpkw-kalkulator-obwodowy-web/index.html
 sudo chmod a+rwx /var/www/html/openpkw-kalkulator-obwodowy-web/index.html
+
+sudo cp /vagrant/etc/apache2/sites-available/openpkw-weryfikator-frontend.conf /etc/apache2/sites-available/openpkw-weryfikator-frontend.conf
+sudo cp /vagrant/openpkw-weryfikator-frontend-index.html /var/www/html/openpkw-weryfikator-frontend/index.html
+sudo chmod a+rwx /var/www/html/openpkw-weryfikator-frontend/index.html
 
 sudo a2dissite 000-default.conf
 sudo a2ensite openpkw-kalkulator-obwodowy-web.conf
+sudo a2ensite openpkw-weryfikator-frontend.conf
 sudo service apache2 restart
