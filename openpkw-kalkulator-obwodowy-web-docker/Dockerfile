@@ -26,6 +26,8 @@ RUN a2dissite 000-default.conf &&\
     a2ensite openpkw-kalkulator-obwodowy-web.conf &&\
     service apache2 restart
 
+RUN a2enmod proxy_http
+
 RUN service ssh start
 
 EXPOSE 80
