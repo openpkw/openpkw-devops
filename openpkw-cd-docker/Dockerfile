@@ -15,6 +15,7 @@ RUN sudo apt-get -y update &&\
     sudo apt-get -y install git &&\
     apt-get -y install maven &&\
     apt-get -y install nodejs &&\
+    apt-get -y install gradle &&\
     sudo apt-get -y install libfontconfig
 RUN ln /usr/bin/nodejs /usr/bin/node -s
 RUN apt-get -y install npm

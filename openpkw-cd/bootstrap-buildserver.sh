@@ -26,6 +26,9 @@ sudo apt-get -y install git
 echo [Installing Maven]
 sudo apt-get -y install maven
 
+echo [Installing Gradle]
+sudo apt-get -y install gradle
+
 echo [Installing Node.js]
 sudo apt-get -y install nodejs
 sudo ln /usr/bin/nodejs /usr/bin/node -s
