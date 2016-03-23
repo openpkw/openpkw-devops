@@ -28,5 +28,7 @@ RUN a2dissite 000-default.conf &&\
 
 RUN sudo service ssh start
 
+RUN a2enmod proxy_http
+
 EXPOSE 80
 EXPOSE 22
